@@ -1,0 +1,28 @@
+/* Inicialmente o fill é transparente. */
+.logo-spidermanbig {
+    fill: transparent;
+
+    animation: logo-spidermanbig 12s ease infinite alternate;
+}
+
+/* A animação ocorre através dos keyframes. */
+/* Pensar nos keyframes como linha do tempo. */
+/* As propriedades definidas aqui são de SVG e não CSS. */
+@keyframes logo-spidermanbig {
+    0% {
+        stroke-width: 0;
+        /* Formação da borda pela união dos dashes
+        prop: borda espaçamento */
+        stroke-dasharray: 1 100;
+        fill: transparent;
+    }
+    25% {
+        stroke-width: 1;
+        stroke-dasharray: 100 0;
+        fill: transparent;
+    }
+    60%, 100% {
+        stroke-width: 0.3;
+        fill: $white-dark;
+    }
+}
